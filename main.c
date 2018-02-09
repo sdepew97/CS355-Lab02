@@ -24,6 +24,8 @@ int main(int argc, char *argv[]) {
     //pthread_t *threads = (pthread_t *) malloc( argc * sizeof(pthread_t) )
     struct thread_data thread_data_array[argc - 1];
 
+    printf("Displaying\n");
+
     for (int i = 1; i < argc; i++) {
         //create threads
         thread_data_array[i - 1].message = argv[i];
@@ -48,6 +50,8 @@ int main(int argc, char *argv[]) {
             exit(EXIT_FAILURE);
         }
     }
+
+    printf("Done");
     return 0;
 }
 
